@@ -99,9 +99,10 @@ export interface CommonWrapper<P = {}, S = {}, C = Component<P, S>> {
     isEmpty(): boolean;
 
     /**
-     * Returns whether or not the current node exists.
+     * Returns whether or not the current node exists. Or, if a selector is passed in, whether that selector
+     * has any matching results.
      */
-    exists(): boolean;
+    exists(selector?: EnzymeSelector): boolean;
 
     /**
      * Returns a new wrapper with only the nodes of the current wrapper that don't match the provided selector.
